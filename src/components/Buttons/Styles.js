@@ -1,41 +1,17 @@
 import styled from "styled-components";
 
-export const InputWrapper = styled.div`
-  width: 40%;
-  margin-left: 300px;
-  /* margin-top: 20px; */
-  top: 39px;
-  display: -moz-inline-box;
-`;
-export const InputWrapper2 = styled.div`
-  width: 100%;
-  position: relative;
-  display: -moz-inline-box;
-`;
-export const InputStyled = styled.input`
-  width: 40%;
-  border: 3px solid ${(props) => props.theme.mainColor};
-  border-right: none;
-  padding: 15px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9dbfaf;
-`;
 export const AddButtonStyle = styled.p`
-  width: 100px;
+  width: 10em;
   border: 1px solid ${(props) => props.theme.mainColor};
   border-radius: 10px;
   background: ${(props) => props.theme.mainColor};
   text-align: center;
   color: #fff;
   cursor: pointer;
-  font-size: 20px;
-  margin: 30px 10px 40px auto;
+  margin: auto;
   padding: 5px;
   font-size: 12px;
   float: right;
-  display: -moz-inline-box;
 `;
 
 export const UpdateShopButtonStyle = styled.p`
@@ -48,7 +24,6 @@ export const UpdateShopButtonStyle = styled.p`
   border-radius: 5px;
   margin: auto;
   padding: 5px;
-
   margin-bottom: 2px;
 `;
 export const DeleteShopButtonStyle = styled.p`
