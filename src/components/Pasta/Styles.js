@@ -1,5 +1,5 @@
-import { Link } from "@material-ui/core";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const ListWrapper = styled.div`
   border-top: 1px solid #979b97;
@@ -10,7 +10,7 @@ export const PastaListWrapper = styled.div`
   margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: center;
   h1 {
     color: ${(props) => props.theme.mainColor};
     margin-top: 100px;
@@ -19,17 +19,17 @@ export const PastaListWrapper = styled.div`
 
 export const ItemWrapper = styled.div`
   text-align: center;
-  margin: auto;
+  padding: 7px;
   img {
     width: 22em;
-    height: 22em;
-    padding: 5px;
+    height: 21.5em;
     display: block;
   }
 
   p {
     display: inline-flex;
     padding-right: 20px;
+    padding-top: 15px;
   }
 `;
 
@@ -40,14 +40,11 @@ export const TitleStyle = styled.h1`
   margin-left: 200px;
 `;
 export const DetailWrapper = styled.div`
-  /* display: block; */
   margin: auto;
-  margin-top: 5em;
+  margin-top: 1em;
   text-align: center;
   img {
-    width: 22em;
-    /* float: left; */
-    /* margin: 20px auto auto 10px; */
+    width: 23em;
   }
 
   p {
@@ -59,4 +56,17 @@ export const DetailWrapper = styled.div`
 
 export const LinkStyle = styled(Link)`
   color: red;
+  cursor: pointer;
+  margin: 100px auto auto 30px;
+  float: left;
+  button {
+    border-radius: 5px;
+    padding: 6px;
+    background-color: ${(props) => props.theme.mainColor};
+    color: ${(props) => props.theme.backgroundColor};
+    :hover {
+      background-color: ${(props) => props.theme.backgroundColor};
+      color: ${(props) => props.theme.mainColor};
+    }
+  }
 `;

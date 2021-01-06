@@ -6,28 +6,33 @@ import { Redirect, useParams } from "react-router";
 import PastaList from "../Pasta/PastaList";
 import AddButton from "../Buttons/AddButton";
 import UpdateButton from "../Buttons/UpdateButton";
+import DeleteButton from "../Buttons/DeleteButton";
 
 // Styles
 import { DetailWrapper } from "./Styles";
 
 // Stores
 import shopStore from "../../stores/shopStore";
-import DeleteButton from "../Buttons/DeleteButton";
 import pastaStore from "../../stores/pastaStore";
 import authStore from "../../stores/authStore";
 
 const ShopDetail = () => {
   const { shopSlug } = useParams();
   const { user } = authStore;
-  if (!user) return <Redirect to="/pastas" />;
-  const shop = shopStore.shops.find((_shop) => _shop.slug === shopSlug);
-  if (!shop) return <Redirect to="/shops" />;
 
+  const shop = shopStore.shops.find((_shop) => _shop.slug === shopSlug);
+
+  if (!shop) return <Redirect to="/shops" />;
+  if (!user) return <Redirect to="/" />;
+  // const pastas =
+  //   shop && shop.pastas
+  //     ? shop.pastas
+  //         .map((pasta) => pastaStore.getPastaById(pasta.id))
+  //         .filter((pasta) => pasta)
+  //     : [];
   const pastas =
     shop && shop.pastas
-      ? shop.pastas
-          .map((pasta) => pastaStore.getPastaById(pasta.id))
-          .filter((pasta) => pasta)
+      ? pastaStore.pastas.filter((pasta) => pasta.shopId === shop.id)
       : [];
 
   return (
@@ -37,7 +42,7 @@ const ShopDetail = () => {
 
         <img src={shop.image} alt={shop.name} />
         <p>{shop.description}</p>
-        {user.role === "admin" ||
+        {user?.role === "admin" ||
           (user?.id === shop?.UserId && (
             <>
               <UpdateButton shop={shop} />

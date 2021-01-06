@@ -1,4 +1,5 @@
 import React from "react";
+import HomeImage from "./HomeImage.png";
 
 // Styles
 import { TextStyle } from "./Styles";
@@ -6,7 +7,7 @@ import { TextStyle } from "./Styles";
 const Home = () => {
   return (
     <TextStyle>
-      <img src="https://assets.stickpng.com/thumbs/589c828564b351149f22a82a.png" />
+      <img src={HomeImage} alt="pasta" />
       Welcome That Pasta Home
     </TextStyle>
   );
