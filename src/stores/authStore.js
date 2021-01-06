@@ -1,6 +1,9 @@
-import { action, makeObservable, observable } from "mobx";
+import { action, makeObservable, observable, configure } from "mobx";
 import decode from "jwt-decode";
 import instance from "./instance";
+configure({
+  enforceActions: "never",
+});
 
 class AuthStore {
   user = null;
@@ -26,7 +29,6 @@ class AuthStore {
   signin = async (userData) => {
     try {
       const res = await instance.post("/signin", userData);
-
       this.setUser(res.data.token);
     } catch (error) {
       console.log(

@@ -1,10 +1,14 @@
-import { action, makeObservable, observable } from "mobx";
+import { action, makeObservable, observable, configure } from "mobx";
 
 import instance from "./instance";
+configure({
+  enforceActions: "never",
+});
 
 class ShopStore {
   shops = [];
   loading = true;
+
   // Fetch Shops
   fetchShops = async () => {
     try {
@@ -21,10 +25,6 @@ class ShopStore {
 
   // Create shop
   createShop = async (newShop) => {
-    console.log(
-      "🚀 ~ file: shopStore.js ~ line 24 ~ ShopStore ~ createShop= ~ newShop",
-      newShop
-    );
     try {
       const formData = new FormData();
       for (const key in newShop) formData.append(key, newShop[key]);

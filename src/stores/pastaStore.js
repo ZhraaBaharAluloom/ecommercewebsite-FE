@@ -1,6 +1,9 @@
-import { action, makeObservable, observable } from "mobx";
+import { action, makeObservable, observable, configure } from "mobx";
 
 import instance from "./instance";
+configure({
+  enforceActions: "never",
+});
 
 class PastaStore {
   pastas = [];
