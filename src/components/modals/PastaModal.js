@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { observer } from "mobx-react";
 import Modal from "react-modal";
-import { AiFillCloseCircle } from "react-icons/ai";
+
+// Stores
 import pastaStore from "../../stores/pastaStore";
 
 // Styles
 import { SpanStyled, InputStyled, LabelStyled, TitleStyled } from "./Styles";
+import { AiFillCloseCircle } from "react-icons/ai";
 const customStyles = {
   content: {
     top: "50%",
@@ -38,7 +41,6 @@ const PastaModal = ({ isOpen, closeModal, oldPasta, shop }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     pastaStore[oldPasta ? "updatePasta" : "createPasta"](pasta, shop);
-
     closeModal();
   };
 
@@ -128,4 +130,4 @@ const PastaModal = ({ isOpen, closeModal, oldPasta, shop }) => {
   );
 };
 
-export default PastaModal;
+export default observer(PastaModal);

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { observer } from "mobx-react";
 
 // Styles
-import { GlobalStyle, ThemeButton, InstagramIconStyle } from "./Styles";
+import { GlobalStyle, InstagramIconStyle } from "./Styles";
 import { ThemeProvider } from "styled-components";
 import { FaInstagramSquare } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io";
@@ -56,7 +56,7 @@ function App() {
         <a href="https://instagram.com/pasta.and.basta?igshid=pf8sfbp9qyd8">
           <FaInstagramSquare color="red" size="20" />
         </a>
-        <a href="">
+        <a href="/#">
           <IoLogoFacebook size="24" />
         </a>
       </InstagramIconStyle>

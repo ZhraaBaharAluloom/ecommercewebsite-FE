@@ -2,11 +2,8 @@ import React from "react";
 import { observer } from "mobx-react";
 import { Link } from "react-router-dom";
 
-// Components
-
 // Styles
 import { ShopItemWrapper } from "./Styles";
-import authStore from "../../stores/authStore";
 
 const ShopItem = ({ shop }) => {
   return (

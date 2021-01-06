@@ -1,7 +1,7 @@
-import { observer } from "mobx-react";
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Styles
 import { SignupButtonStyled } from "./Styles";
 
 const Signup = () => {
@@ -14,4 +14,4 @@ const Signup = () => {
   );
 };
 
-export default observer(Signup);
+export default Signup;

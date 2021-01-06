@@ -6,9 +6,11 @@ import { Link } from "react-router-dom";
 import DeleteButton from "../Buttons/DeleteButton";
 import UpdateButton from "../Buttons/UpdateButton";
 
-//Data
-import { ItemWrapper } from "./Styles";
+//Stores
 import authStore from "../../stores/authStore";
+
+// Styles
+import { ItemWrapper } from "./Styles";
 
 const PastaItem = ({ pasta, shop }) => {
   const { user } = authStore;
@@ -16,9 +18,8 @@ const PastaItem = ({ pasta, shop }) => {
     <ItemWrapper>
       <img src={pasta.image} alt={pasta.name} />
       <p>
-        {pasta.name}
         <Link style={{ color: "black" }} to={`/pastas/${pasta.slug}`}>
-          ... more
+          {pasta.name}
         </Link>
         {user && user.id === shop?.UserId && (
           <>

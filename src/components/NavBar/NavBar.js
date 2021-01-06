@@ -37,27 +37,23 @@ function Navbar() {
               marginBottom: 30,
               float: "left",
             }}
+            alt="logo"
           />
-          <i class="fal fa-utensils-alt" />
+          <i className="fal fa-utensils-alt" />
         </Link>
 
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
-          {authStore.user?.role === "admin" ||
-            (authStore.user?.role === "vendor" && (
-              <li className="nav-item">
-                <Link
-                  to="/shops"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  Shops
-                  <i class="far fa-utensils-alt" />
-                </Link>
-              </li>
-            ))}
+          {authStore.user?.role === ("admin" || "vendor") && (
+            <li className="nav-item">
+              <Link to="/shops" className="nav-links" onClick={closeMobileMenu}>
+                Shops
+                <i className="far fa-utensils-alt" />
+              </Link>
+            </li>
+          )}
 
           <li className="nav-item">
             <Link to="/pastas" className="nav-links" onClick={closeMobileMenu}>
@@ -84,7 +80,7 @@ function Navbar() {
                     onClick={closeMobileMenu}
                   >
                     My Shop
-                    <i class="far fa-utensils-alt" />
+                    <i className="far fa-utensils-alt" />
                   </Link>
                 </li>
               )}

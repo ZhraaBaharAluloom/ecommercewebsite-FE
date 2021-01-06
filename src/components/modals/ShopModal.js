@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { observer } from "mobx-react";
 import Modal from "react-modal";
-import { AiFillCloseCircle } from "react-icons/ai";
+
+// Stores
 import shopStore from "../../stores/shopStore";
 
 // Styles
 import { SpanStyled, InputStyled, LabelStyled, TitleStyled } from "./Styles";
+import { AiFillCloseCircle } from "react-icons/ai";
 const customStyles = {
   content: {
     top: "50%",
@@ -45,7 +48,6 @@ const ShopModal = ({ isOpen, closeModal, oldShop }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     shopStore[oldShop ? "updateShop" : "createShop"](shop);
-
     closeModal();
   };
 
@@ -121,4 +123,4 @@ const ShopModal = ({ isOpen, closeModal, oldShop }) => {
   );
 };
 
-export default ShopModal;
+export default observer(ShopModal);

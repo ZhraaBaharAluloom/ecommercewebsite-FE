@@ -1,16 +1,17 @@
 import React, { useState } from "react";
+import { Redirect } from "react-router";
 import { observer } from "mobx-react";
-import { Redirect, useHistory } from "react-router";
 
 //Stores
 import authStore from "../../stores/authStore";
+
+// Components
 import SignupButton from "../Buttons/SignupButton";
 
 // Styles
-import { SpanStyled, InputStyled, LabelStyled, TitleStyled } from "./Styles";
+import { InputStyled } from "./Styles";
 
 const Signin = () => {
-  const history = useHistory();
   const [user, setUser] = useState({
     username: "",
     password: "",
@@ -23,11 +24,6 @@ const Signin = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     authStore.signin(user);
-    // history.push("/pastas");
-    // setUser({
-    //   username: "",
-    //   password: "",
-    // });
   };
 
   if (authStore.user)
@@ -49,9 +45,6 @@ const Signin = () => {
     >
       <div className="form-row">
         <div className="form-group col-md-12  ">
-          {/* <LabelStyled for="inputEmail4">
-            Username <SpanStyled>*</SpanStyled>
-          </LabelStyled> */}
           <InputStyled
             required
             type="text"

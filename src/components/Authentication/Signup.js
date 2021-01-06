@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import SigninButton from "../Buttons/SigninButton";
 
 //Stores
 import authStore from "../../stores/authStore";
 
 // Styles
-import { SpanStyled, InputStyled, LabelStyled, TitleStyled } from "./Styles";
+import { InputStyled } from "./Styles";
 
 const Signup = () => {
   const history = useHistory();
@@ -27,7 +27,7 @@ const Signup = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     authStore.signup(user);
-    history.push("/");
+    history.push("/shops");
   };
 
   return (

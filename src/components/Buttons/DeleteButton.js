@@ -1,6 +1,4 @@
 import React from "react";
-import { FaRegTrashAlt } from "react-icons/fa";
-// import { useHistory } from "react-router";
 
 //Stores
 import pastaStore from "../../stores/pastaStore";
@@ -8,10 +6,9 @@ import shopStore from "../../stores/shopStore";
 
 // Styles
 import { DeleteShopButtonStyle } from "./Styles";
+import { FaRegTrashAlt } from "react-icons/fa";
 
 const DeleteButton = ({ pastaId, shopId }) => {
-  // const history = useHistory();
-
   const handleDelete = () => {
     if (shopId) {
       shopStore.deleteShop(shopId);
