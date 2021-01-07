@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 // Components
 import DeleteButton from "../Buttons/DeleteButton";
 import UpdateButton from "../Buttons/UpdateButton";
+import AddToCart from "../Buttons/AddToCart";
 
 //Stores
 import authStore from "../../stores/authStore";
@@ -18,9 +19,8 @@ const PastaItem = ({ pasta, shop }) => {
     <ItemWrapper>
       <img src={pasta.image} alt={pasta.name} />
       <p>
-        <Link style={{ color: "black" }} to={`/pastas/${pasta.slug}`}>
-          {pasta.name}
-        </Link>
+        <Link style={{ color: "black" }} to={`/pastas/${pasta.slug}`}></Link>
+        {pasta.name}
         {user && user.id === shop?.UserId && (
           <>
             <DeleteButton pastaId={pasta.id} />
@@ -28,6 +28,8 @@ const PastaItem = ({ pasta, shop }) => {
           </>
         )}
       </p>
+      <p style={{ display: "block", padding: 0 }}>$ {pasta.price}</p>
+      <AddToCart pasta={pasta} />
     </ItemWrapper>
   );
 };

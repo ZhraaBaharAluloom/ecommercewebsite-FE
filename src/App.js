@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { observer } from "mobx-react";
 
 // Styles
-import { GlobalStyle, InstagramIconStyle } from "./Styles";
+import { GlobalStyle, InstagramIconStyle, CartLinkStyle } from "./Styles";
 import { ThemeProvider } from "styled-components";
 import { FaInstagramSquare } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 // Components
 import NavBar from "./components/NavBar/NavBar";
@@ -15,6 +16,8 @@ import Loading from "./components/loading/Loading";
 // Stores
 import shopStore from "./stores/shopStore";
 import pastaStore from "./stores/pastaStore";
+import { Link } from "react-router-dom";
+import cartStore from "./stores/cartStore";
 
 const theme = {
   light: {
@@ -48,6 +51,12 @@ function App() {
     <ThemeProvider theme={theme[currentTheme]}>
       <GlobalStyle />
       <NavBar handleToggle={handleToggle} currentTheme={currentTheme} />
+      <CartLinkStyle to="/cart">
+        <AiOutlineShoppingCart
+          style={{ fontSize: 30, margin: 5, color: "grey" }}
+        />
+        ({cartStore.items.length})
+      </CartLinkStyle>
       {/* <ThemeButton onClick={handleToggle}>
         {currentTheme === "light" ? "Dark Mode" : "Light Mode"}
       </ThemeButton> */}

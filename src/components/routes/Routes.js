@@ -11,6 +11,7 @@ import pastaStore from "../../stores/pastaStore";
 import Signin from "../Authentication/Signin";
 import Signup from "../Authentication/Signup";
 import Home from "../Home/Home";
+import CartList from "../Cart/CartList";
 
 const Routes = () => {
   return (
@@ -32,6 +33,9 @@ const Routes = () => {
       </Route>
       <Route path="/sign-up">
         <Signup />
+      </Route>
+      <Route path="/cart">
+        <CartList />
       </Route>
       <Route path="/">
         <Home />

@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const GlobalStyle = createGlobalStyle`
 body {
@@ -24,4 +25,11 @@ export const InstagramIconStyle = styled.div`
   /* flex-wrap: wrap; */
   margin-top: 100px;
   padding: 20px;
+`;
+
+export const CartLinkStyle = styled(Link)`
+  display: flex;
+  float: right;
+  margin: 10px;
+  color: grey;
 `;

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export const ListWrapper = styled.div`
   border-top: 1px solid #979b97;
   margin-top: 50px;
+  /* width: 20%; */
 `;
 
 export const PastaListWrapper = styled.div`
@@ -28,8 +29,8 @@ export const ItemWrapper = styled.div`
 
   p {
     display: inline-flex;
-    padding-right: 20px;
-    padding-top: 15px;
+    padding-top: 5px;
+    font-weight: bold;
   }
 `;
 

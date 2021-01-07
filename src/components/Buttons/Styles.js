@@ -13,6 +13,23 @@ export const AddButtonStyle = styled.p`
   font-size: 12px;
   float: right;
 `;
+export const AddToCartButtonStyle = styled.button`
+  width: 9em;
+  border: 1px solid ${(props) => props.theme.mainColor};
+  border-radius: 10px;
+  background: ${(props) => props.theme.mainColor};
+  color: ${(props) => props.theme.backgroundColor};
+  cursor: pointer;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+
+  :hover {
+    background-color: ${(props) => props.theme.backgroundColor};
+    color: ${(props) => props.theme.mainColor};
+  }
+  margin-bottom: 30px;
+`;
 
 export const UpdateShopButtonStyle = styled.p`
   cursor: pointer;
