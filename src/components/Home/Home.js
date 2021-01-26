@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <TextStyle>
       <img src={HomeImage} alt="pasta" />
-      Welcome That Pasta Home
+      Welcome to That Pasta
     </TextStyle>
   );
 };

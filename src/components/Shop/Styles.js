@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ListWrapper = styled.div`
-  border-top: 1px solid #979b97;
+  /* border-top: 1px solid #979b97; */
   margin-top: 50px;
 `;
 
@@ -25,6 +25,7 @@ export const DetailWrapper = styled.div`
   }
   p {
     padding-top: 10px;
+    font-weight: bold;
   }
 `;
 export const ShopItemWrapper = styled.div`

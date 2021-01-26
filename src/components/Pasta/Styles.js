@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const ListWrapper = styled.div`
-  border-top: 1px solid #979b97;
+  /* border-top: 1px solid #979b97; */
   margin-top: 50px;
   /* width: 20%; */
 `;
@@ -40,18 +40,34 @@ export const ItemStyle = styled.li`
 export const TitleStyle = styled.h1`
   margin-left: 200px;
 `;
+
 export const DetailWrapper = styled.div`
   margin: auto;
-  margin-top: 1em;
+  margin-top: 8em;
   text-align: center;
+
   img {
-    width: 23em;
+    width: 22em;
   }
 
   p {
-    margin-top: 20px;
-    vertical-align: middle;
     text-align: center;
+    font-weight: bold;
+    border: 1px;
+    width: 400px;
+    margin: 20px auto auto auto;
+  }
+`;
+
+export const InputFieldStyle = styled.input`
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 4em;
+  padding-left: 10px;
+  margin: auto;
+  margin-bottom: 5px;
+  :hover {
+    border-color: #aa7788;
   }
 `;
 

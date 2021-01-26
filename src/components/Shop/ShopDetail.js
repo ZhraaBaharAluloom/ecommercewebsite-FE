@@ -50,7 +50,8 @@ const ShopDetail = () => {
             </>
           ))}
       </DetailWrapper>
-      <PastaList pastas={pastas} shop={shop} />
+      {shop.pastas ? <PastaList pastas={pastas} shop={shop} /> : "Sorry"}
+
       {user?.id === shop.UserId && <AddButton shop={shop} />}
     </>
   );
