@@ -2,9 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const ListWrapper = styled.div`
-  /* border-top: 1px solid #979b97; */
   margin-top: 50px;
-  /* width: 20%; */
 `;
 
 export const PastaListWrapper = styled.div`
