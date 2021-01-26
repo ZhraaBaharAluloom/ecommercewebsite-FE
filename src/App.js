@@ -16,7 +16,6 @@ import Loading from "./components/loading/Loading";
 // Stores
 import shopStore from "./stores/shopStore";
 import pastaStore from "./stores/pastaStore";
-import { Link } from "react-router-dom";
 import cartStore from "./stores/cartStore";
 
 const theme = {
@@ -55,7 +54,7 @@ function App() {
         <AiOutlineShoppingCart
           style={{ fontSize: 30, margin: 5, color: "grey" }}
         />
-        ({cartStore.items.length})
+        ({cartStore.totalQuantity})
       </CartLinkStyle>
       {/* <ThemeButton onClick={handleToggle}>
         {currentTheme === "light" ? "Dark Mode" : "Light Mode"}

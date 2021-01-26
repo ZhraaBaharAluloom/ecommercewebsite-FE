@@ -5,13 +5,14 @@ import cartStore from "../../stores/cartStore";
 // Styles
 import { AddToCartButtonStyle } from "./Styles";
 
-const AddToCart = ({ pasta }) => {
-  const handleButton = (pasta) => {
-    cartStore.addItemToCart(pasta);
+const AddToCart = ({ pasta, quantity }) => {
+  const handleButton = () => {
+    const newItem = { quantity, pastaId: pasta.id };
+    cartStore.addItemToCart(newItem);
   };
   return (
     <>
-      <AddToCartButtonStyle onClick={() => handleButton(pasta)}>
+      <AddToCartButtonStyle onClick={handleButton}>
         ADD TO CART
       </AddToCartButtonStyle>
     </>
