@@ -12,6 +12,7 @@ import Signin from "../Authentication/Signin";
 import Signup from "../Authentication/Signup";
 import Home from "../Home/Home";
 import CartList from "../Cart/CartList";
+import PayPal from "../Paypal/PayPal";
 
 const Routes = () => {
   return (
@@ -34,6 +35,9 @@ const Routes = () => {
       <Route path="/sign-up">
         <Signup />
       </Route>
+      {/* <Route path="/checkout">
+        <PayPal />
+      </Route> */}
       <Route path="/cart">
         <CartList />
       </Route>
