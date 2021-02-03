@@ -20,18 +20,21 @@ export const ThemeButton = styled.button`
 `;
 export const InstagramIconStyle = styled.div`
   border-top: 1px solid #979b97;
-
   /* justify-content: center; */
-  display: flex;
+  /* display: flex; */
   /* flex-wrap: wrap; */
   margin: 10em 5em 0em 5em;
-
   padding: 20px;
+  p {
+    display: block;
+    color: grey;
+    font-size: 15px;
+  }
 `;
 
 export const CartLinkStyle = styled(Link)`
-  display: block;
+  display: flex;
   float: right;
-  margin: 10px;
+  margin: 1em 0.4em auto auto;
   color: grey;
 `;
