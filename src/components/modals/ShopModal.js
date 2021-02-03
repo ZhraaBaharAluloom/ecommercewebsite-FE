@@ -77,7 +77,7 @@ const ShopModal = ({ isOpen, closeModal, oldShop }) => {
               className="form-control"
               onChange={handleChange}
               name="name"
-              placeholder="Name of Shop"
+              placeholder="Restaurant's Name"
               value={shop.name}
             />
           </div>
@@ -92,7 +92,7 @@ const ShopModal = ({ isOpen, closeModal, oldShop }) => {
               className="form-control"
               onChange={handleChange}
               name="description"
-              placeholder="Describe your shop Hassan"
+              placeholder="EX: Desserts, Breakfast , Turkish, Seafood..etc"
               value={shop.description}
             />
           </div>

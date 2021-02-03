@@ -8,6 +8,7 @@ import SearchBar from "../Serachbar/SearchBar";
 
 // Stores
 import shopStore from "../../stores/shopStore";
+import authStore from "../../stores/authStore";
 
 // Styles
 import { ListWrapper, ShopListWrapper } from "./Styles";
@@ -21,9 +22,9 @@ const ShopList = () => {
 
   return (
     <ListWrapper className="container">
-      <SearchBar setQuery={setQuery} />
+      <SearchBar setQuery={setQuery} shop />
       <ShopListWrapper>{shopList}</ShopListWrapper>
-      <AddButton />
+      {authStore.user?.role === "vendor" && <AddButton />}
     </ListWrapper>
   );
 };

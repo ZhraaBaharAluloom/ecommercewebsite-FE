@@ -9,12 +9,12 @@ import {
 } from "./Styles";
 import { FaSearch } from "react-icons/fa";
 
-const SearchBar = ({ setQuery }) => {
+const SearchBar = ({ setQuery, shop }) => {
   return (
     <SearchbarWrapper>
       <SearchbarWrapper2>
         <SearchbarStyled
-          placeholder="Search for pasta "
+          placeholder={shop ? "Search for Restaurant " : "Search for Pasta"}
           onChange={(event) => setQuery(event.target.value)}
         />
         <SearchButtonStyle type="submit">

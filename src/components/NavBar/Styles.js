@@ -14,8 +14,8 @@ export const NavBarStyle = styled.div`
     );
     height: 80px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     font-size: 1.2rem;
   }
 
@@ -28,15 +28,15 @@ export const NavBarStyle = styled.div`
     font-size: 2rem;
   }
 
-  .fa-firstdraft {
+  /* .fa-firstdraft {
     margin-left: 0.5rem;
     font-size: 1.6rem;
-  }
+  } */
 
   .nav-menu {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    grid-gap: 10px;
+    grid-gap: 15px;
     list-style: none;
     text-align: center;
     width: 70vw;
@@ -53,7 +53,7 @@ export const NavBarStyle = styled.div`
   .nav-links {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
   }
 
   .nav-links:hover {

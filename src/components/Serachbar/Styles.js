@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SearchbarWrapper = styled.div`
-  margin-top: 10px;
+  margin-top: 5em;
   display: flex;
   justify-content: center;
 `;

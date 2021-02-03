@@ -19,7 +19,7 @@ export const ShopListWrapper = styled.div`
 
 export const DetailWrapper = styled.div`
   text-align: center;
-  margin-top: 10px;
+  margin-top: 4em;
   img {
     width: 100%;
   }
@@ -32,13 +32,15 @@ export const ShopItemWrapper = styled.div`
   img {
     width: 22em;
     height: 22em;
-    padding: 5px;
+    padding: 2px;
     display: block;
   }
   p {
-    text-align: center;
-    padding-top: 10px;
+    /* text-align: center; */
+    /* padding-top: 10px; */
+    color: ${(props) => props.theme.mainColor};
   }
+  padding: 1em;
   margin-top: 10px;
   border: 1px;
 `;

@@ -40,20 +40,29 @@ export const TitleStyle = styled.h1`
 `;
 
 export const DetailWrapper = styled.div`
-  margin: auto;
-  margin-top: 8em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
   text-align: center;
-
+  color: ${(props) => props.theme.backgroundColor};
   img {
-    width: 22em;
+    width: 100%;
+    height: 100%;
   }
 
   p {
     text-align: center;
     font-weight: bold;
     border: 1px;
-    width: 400px;
-    margin: 20px auto auto auto;
+    /* width: 20em; */
+    margin: 1em auto auto auto;
+    &.shop-name {
+      margin-bottom: 3em;
+      color: ${(props) => props.theme.mainColor};
+    }
+  }
+  h5 {
+    margin-top: 1em;
   }
 `;
 
