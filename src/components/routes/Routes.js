@@ -12,7 +12,9 @@ import Signin from "../Authentication/Signin";
 import Signup from "../Authentication/Signup";
 import Home from "../Home/Home";
 import CartList from "../Cart/CartList";
-import PayPal from "../Paypal/PayPal";
+// import PayPal from "../Paypal/PayPal";
+import AboutUs from "../Aboutus/AboutUs";
+import ContactUs from "../Contactus/ContactUs";
 
 const Routes = () => {
   return (
@@ -28,6 +30,12 @@ const Routes = () => {
       </Route>
       <Route path="/pastas">
         <PastaList pastas={pastaStore.pastas} />
+      </Route>
+      <Route path="/about-us">
+        <AboutUs />
+      </Route>
+      <Route path="/contact-us">
+        <ContactUs />
       </Route>
       <Route path="/sign-in">
         <Signin />
