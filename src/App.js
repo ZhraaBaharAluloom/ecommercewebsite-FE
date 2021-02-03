@@ -7,6 +7,7 @@ import { ThemeProvider } from "styled-components";
 import { FaInstagramSquare } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { FaTwitterSquare } from "react-icons/fa";
 
 // Components
 import NavBar from "./components/NavBar/NavBar";
@@ -51,21 +52,23 @@ function App() {
       <GlobalStyle />
       <NavBar handleToggle={handleToggle} currentTheme={currentTheme} />
       <CartLinkStyle to="/cart">
-        <AiOutlineShoppingCart
-          style={{ fontSize: 30, margin: 5, color: "grey" }}
-        />
-        ({cartStore.totalQuantity})
+        <AiOutlineShoppingCart style={{ fontSize: 30, color: "grey" }} />(
+        {cartStore.totalQuantity})
       </CartLinkStyle>
       {/* <ThemeButton onClick={handleToggle}>
         {currentTheme === "light" ? "Dark Mode" : "Light Mode"}
       </ThemeButton> */}
       {shopStore.loading || pastaStore.loading ? <Loading /> : <Routes />}
       <InstagramIconStyle>
+        <p>Follow us on</p>
         <a href="https://instagram.com/pasta.and.basta?igshid=pf8sfbp9qyd8">
-          <FaInstagramSquare color="red" size="20" />
+          <FaInstagramSquare color="grey" size="20" />
         </a>
         <a href="/#">
-          <IoLogoFacebook size="24" />
+          <IoLogoFacebook color="grey" size="24" />
+        </a>
+        <a href="/#">
+          <FaTwitterSquare color="grey" size="21.5" />
         </a>
       </InstagramIconStyle>
     </ThemeProvider>
