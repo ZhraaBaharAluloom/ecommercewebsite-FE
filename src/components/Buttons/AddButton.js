@@ -18,7 +18,7 @@ const AddButton = ({ shop }) => {
     <>
       <AddButtonStyle onClick={openModal}>
         <GoPlus style={{ marginRight: 5, fontSize: 15 }} />
-        {!shop ? "Create Shop" : " Add Pasta"}
+        {!shop ? "Add Restaurant" : " Add Pasta"}
       </AddButtonStyle>
       {shop ? (
         <PastaModal shop={shop} isOpen={isOpen} closeModal={closeModal} />

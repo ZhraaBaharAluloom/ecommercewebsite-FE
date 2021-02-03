@@ -8,7 +8,7 @@ export const AddButtonStyle = styled.p`
   text-align: center;
   color: #fff;
   cursor: pointer;
-  margin: auto;
+  margin: auto 0.4em auto auto;
   padding: 5px;
   font-size: 12px;
   float: right;
