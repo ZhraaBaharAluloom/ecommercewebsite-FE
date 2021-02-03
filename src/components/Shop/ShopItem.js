@@ -8,9 +8,16 @@ import { ShopItemWrapper } from "./Styles";
 const ShopItem = ({ shop }) => {
   return (
     <ShopItemWrapper>
-      <img src={shop.image} alt={shop.name} />
       <Link to={`/shops/${shop.slug}`}>
-        <p>{shop.name}</p>
+        <div className="card">
+          <img src={shop.image} className="card-img-top" alt={shop.name} />
+          <div className="card-body">
+            <p className="card-text">
+              <p>{shop.name}</p>
+              {shop.description}
+            </p>
+          </div>
+        </div>
       </Link>
     </ShopItemWrapper>
   );
