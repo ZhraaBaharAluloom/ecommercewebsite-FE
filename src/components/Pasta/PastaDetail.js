@@ -6,16 +6,28 @@ import AddToCart from "../Buttons/AddToCart";
 // Stores
 import pastaStore from "../../stores/pastaStore";
 import shopStore from "../../stores/shopStore";
+import authStore from "../../stores/authStore";
 
 // Styles
 import { DetailWrapper, LinkStyle, InputFieldStyle } from "./Styles";
+import Comment from "../Comments/Comment";
+import commentStore from "../../stores/commentStore";
 
 const PastaDetail = () => {
   const [quantity, setQuantity] = useState(1);
   const { pastaSlug } = useParams();
 
   const pasta = pastaStore.pastas.find((pasta) => pasta.slug === pastaSlug);
-  const shop = shopStore.shops.filter((shop) => shop.id === pasta.shopId);
+  const shop = shopStore.shops.filter((shop) => shop.id === pasta?.shopId);
+  const { user } = authStore;
+  const pastaComments = commentStore.comments.filter(
+    (_comment) => _comment.pastaId === pasta.id
+  );
+  console.log(
+    "🚀 ~ file: PastaDetail.js ~ line 26 ~ PastaDetail ~ pastaComments",
+    pastaComments
+  );
+
   if (!pasta) return <Redirect to="/pastas" />;
 
   return (
@@ -62,6 +74,8 @@ const PastaDetail = () => {
             </div>
           </div>
         </div>
+
+        <Comment pastaId={pasta.id} user={user} pastaComments={pastaComments} />
         <LinkStyle to="/pastas">
           <button>Go Back</button>
         </LinkStyle>
