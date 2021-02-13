@@ -70,7 +70,7 @@ const PastaModal = ({ isOpen, closeModal, oldPasta, shop }) => {
               className="form-control"
               onChange={handleChange}
               name="name"
-              placeholder="Name of Pasta"
+              placeholder="Name of Meal"
               value={pasta.name}
             />
           </div>
@@ -85,7 +85,7 @@ const PastaModal = ({ isOpen, closeModal, oldPasta, shop }) => {
               className="form-control"
               onChange={handleChange}
               name="price"
-              placeholder="Your Pasta Price"
+              placeholder="The Price of the Meal"
               value={pasta.price}
             />
           </div>
@@ -99,7 +99,7 @@ const PastaModal = ({ isOpen, closeModal, oldPasta, shop }) => {
               className="form-control"
               onChange={handleChange}
               name="description"
-              placeholder="Describe your pasta Hassan"
+              placeholder="Describe your Meal"
               value={pasta.description}
             />
           </div>
@@ -123,7 +123,7 @@ const PastaModal = ({ isOpen, closeModal, oldPasta, shop }) => {
           className="btn btn-primary"
           onSubmit={handleSubmit}
         >
-          {oldPasta ? "Update" : "Create"}
+          {oldPasta ? "Update" : "Add"}
         </button>
       </form>
     </Modal>
