@@ -9,7 +9,7 @@ import authStore from "../../stores/authStore";
 import SignupButton from "../Buttons/SignupButton";
 
 // Styles
-import { InputStyled } from "./Styles";
+import { InputStyled, AuthButtonStyled } from "./Styles";
 
 const Signin = () => {
   const [user, setUser] = useState({
@@ -37,10 +37,10 @@ const Signin = () => {
 
         border: "1px solid #D6D6D6",
         borderRadius: 4,
-        padding: 10,
+        padding: 15,
         width: "21rem",
         margin: "auto",
-        marginTop: "8rem",
+        marginTop: "15rem",
       }}
     >
       <div className="form-row">
@@ -70,14 +70,9 @@ const Signin = () => {
       </div>
 
       <SignupButton />
-      <button
-        style={{ backgroundColor: "black" }}
-        type="submit"
-        className="btn btn-primary"
-        onClick={handleSubmit}
-      >
+      <AuthButtonStyled type="submit" onClick={handleSubmit}>
         Sign In
-      </button>
+      </AuthButtonStyled>
     </form>
   );
 };

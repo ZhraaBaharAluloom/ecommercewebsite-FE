@@ -6,7 +6,7 @@ import SigninButton from "../Buttons/SigninButton";
 import authStore from "../../stores/authStore";
 
 // Styles
-import { InputStyled } from "./Styles";
+import { InputStyled, AuthButtonStyled } from "./Styles";
 
 const Signup = () => {
   const history = useHistory();
@@ -38,10 +38,10 @@ const Signup = () => {
 
         border: "1px solid #D6D6D6",
         borderRadius: 4,
-        padding: 10,
+        padding: 15,
         width: "21rem",
         margin: "auto",
-        marginTop: "8rem",
+        marginTop: "15rem",
       }}
     >
       <div className="form-row">
@@ -104,14 +104,9 @@ const Signup = () => {
       </div>
 
       <SigninButton signUp />
-      <button
-        style={{ backgroundColor: "black" }}
-        type="submit"
-        className="btn btn-primary"
-        onClick={handleSubmit}
-      >
+      <AuthButtonStyled type="submit" onClick={handleSubmit}>
         Sign Up
-      </button>
+      </AuthButtonStyled>
     </form>
   );
 };
