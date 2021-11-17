@@ -7,7 +7,7 @@ I named it "That Pasta" because, like this website, you can eat and cook pasta i
 The main purposes of this repository are learning and practice.
 
 # Status (uncompleted)
-This project is not completed yet. I am planning to develop it more and more, and make the electronic payment work perfectly, as well as fix a lot of bugs.
+This project is not completed yet. I am planning to develop it more and more and add new features (like localization, locations, delivery, user profile, allowing the user to add multiple images, etc.) and make the electronic payment work perfectly, as well as fix a lot of bugs.
 
 # Built with
 - Languages/Frameworks: JavaScript, ReactJS.
